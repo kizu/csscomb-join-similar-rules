@@ -1,0 +1,7 @@
+{
+  "private": true,
+
+  "dependencies": {
+    "csscomb": "git://github.com/csscomb/csscomb.js.git#tg/236-plugins-api"
+  }
+}
