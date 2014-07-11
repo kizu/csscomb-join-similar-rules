@@ -5,7 +5,7 @@ module.exports = {
 
     accepts: { boolean: [true, false] },
 
-    runBefore: 'sort-order',
+    runBefore: 'strip-spaces',
 
     /**
      * Processes tree node.
