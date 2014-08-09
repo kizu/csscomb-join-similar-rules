@@ -67,6 +67,14 @@ module.exports = {
                     prevSelector = normalizeSelector(prevRuleset[1].slice(1));
                     currentSelector = normalizeSelector(currentRuleset[1].slice(1));
                     if (prevSelector === currentSelector) {
+                        // Remove the whitespace from the end of the current rule
+                        if (currentRuleset[2][currentRuleset[2].length - 1][0] == 's') {
+                            currentRuleset[2].pop();
+                        }
+                        // Remove the whitespace from the start of the joined rule
+                        if (prevRuleset[2][1][0] == 's') {
+                            prevRuleset[2].splice(1, 1);
+                        }
                         // Insert declDelim if the current ruleset lacks it
                         if (needDeclDelim(currentRuleset)) {
                             currentRuleset[2].splice(currentRuleset[2].length, 0, ['declDelim']);

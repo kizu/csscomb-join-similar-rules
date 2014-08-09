@@ -29,4 +29,4 @@ This is a plugin for CSSComb.js, to learn how to use it read the corresponding d
 
 ## Known issues
 
-The joining is literal and does not handle any whitespaces, so you should use other CSSComb.js options to prettify the result.
+There won't be any whitespaces between the joined declarations, so you should use `space-between-declarations` to set it if you'll need it.
