@@ -52,4 +52,15 @@ describe('Join similar rules', function() {
         var result = csscomb.processString(css);
         assert.equal(result, expected);
     });
+
+    it('Should work with other prettifying options', function() {
+        csscomb.configure({
+            'join-similar-rules': true,
+            'space-between-declarations': '\n'
+        });
+        var css = 'a { width: 10px; } a { height: 10px; }';
+        var expected = 'a { width: 10px; \nheight: 10px; } '; // Why there is a space?
+        var result = csscomb.processString(css);
+        assert.equal(result, expected);
+    });
 });

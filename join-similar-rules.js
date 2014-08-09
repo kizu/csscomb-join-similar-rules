@@ -5,6 +5,8 @@ module.exports = {
 
     accepts: { boolean: [true] },
 
+    runBefore: 'always-semicolon',
+
     /**
      * Processes tree node.
      * @param {String} nodeType
