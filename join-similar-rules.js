@@ -1,11 +1,9 @@
 module.exports = {
-    name: 'rule-joiner',
+    name: 'join-similar-rules',
 
     syntax: ['css', 'less', 'sass', 'scss'],
 
     accepts: { boolean: [true, false] },
-
-    runBefore: 'strip-spaces',
 
     /**
      * Processes tree node.
@@ -13,7 +11,7 @@ module.exports = {
      * @param {node} node
      */
     process: function(nodeType, node) {
-        var value = this.getValue('rule-joiner');
+        var value = this.getValue('join-similar-rules');
         if (value !== true) return;
         // Hacky hack, replace with some proper gonzales stringify
         var normalizeSelector = function(selector) {

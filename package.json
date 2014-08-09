@@ -1,7 +1,23 @@
 {
-  "private": true,
-
-  "dependencies": {
-    "csscomb": "git://github.com/csscomb/csscomb.js.git#tg/236-plugins-api"
+  "name": "csscomb-join-similar-rules",
+  "version": "0.0.1",
+  "main": "join-similar-rules.js",
+  "author": "Roman Komarov <kizmarh@ya.ru> (http://kizu.ru/en/)",
+  "license": "MIT",
+  "description": "CSSComb.js option for joining the rules with the same selectors",
+  "homepage": "https://github.com/kizu/csscomb-join-similar-rules#readme",
+  "bugs": {
+    "url": "http://github.com/kizu/csscomb-join-similar-rules/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kizu/csscomb-join-similar-rules.git"
+  },
+  "devDependencies": {
+    "csscomb": "~3.0.0",
+    "mocha": "^1.20.1"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test.js"
   }
 }
