@@ -3,7 +3,7 @@ module.exports = {
 
     syntax: ['css', 'less', 'sass', 'scss'],
 
-    accepts: { boolean: [true, false] },
+    accepts: { boolean: [true] },
 
     /**
      * Processes tree node.

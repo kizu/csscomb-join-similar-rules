@@ -11,6 +11,13 @@ describe('Join similar rules', function() {
         var result = csscomb.processString(css);
         assert.equal(result, expected);
     });
+    it('Should join two simple rules with newline character', function() {
+        csscomb.configure({'join-similar-rules': true});
+        var css = 'a { width: 10px; }\na { height: 10px; }';
+        var expected = 'a { width: 10px;  height: 10px; }\n';
+        var result = csscomb.processString(css);
+        assert.equal(result, expected);
+    });
     it('Should join two rules if there is a comment between them', function() {
         csscomb.configure({'join-similar-rules': true});
         var css = 'a { width: 10px; } /* hey! */ a { height: 10px; }';
