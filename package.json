@@ -1,6 +1,6 @@
 {
   "name": "csscomb-join-similar-rules",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "join-similar-rules.js",
   "author": "Roman Komarov <kizmarh@ya.ru> (http://kizu.ru/en/)",
   "license": "MIT",
